@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Musically</string>
+    <string name="text_log_in">Log In</string>
+    <string name="text_or">OR</string>
+    <string name="email_log_in">Musername or Email</string>
+    <string name="text_forgot_your_password">Forgot your password?</string>
+    <string name="text_get_help_signing_in">Get help signing in.</string>
+    <string name="login_password">Password</string>
+    <string name="text_log_in2">Log In</string>
+    <string name="register_username">Create a Username</string>
+    <string name="text_create_account">Create Account</string>
+    <string name="btn_continue">Continue</string>
+    <string name="text_sign">By signing up, you agree to the</string>
+    <string name="amp"><![CDATA[&]]></string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="register_password">Create a Password</string>
+    <string name="privacy_policy">Privacy Policy.</string>
+</resources>
