@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class home extends AppCompatActivity {
@@ -27,9 +28,9 @@ public class home extends AppCompatActivity {
 
     }
 
-    public void postedBy(View view) {
-
-        showToast("Posted by Netflix");
+    public void postedBy(View v) {
+        ImageView imageView = findViewById(v.getId());
+        showToast("Posted by " +  imageView.getContentDescription());
     }
 
     public void copy(View view) {
