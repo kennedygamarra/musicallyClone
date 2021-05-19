@@ -9,22 +9,57 @@ import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class home extends AppCompatActivity {
 
+    private TextView textViewId;
+    private String id;
+    FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         setTheme(R.style.ThemeMusically);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        textViewId = findViewById(R.id.textViewId);
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user!=null){
+            id = user.getEmail();
+            textViewId.setText("id:" + id);
+        }
     }
 
 
+
     public void goBack(View view) {
-        Intent intent = new Intent(this,
-                MainActivity.class);
-        startActivity(intent);
+        AlertDialog.Builder myAlertBuilder =
+                new AlertDialog.Builder(home.this);
+        myAlertBuilder.setTitle("Log out");
+        myAlertBuilder.setMessage("Are you sure want to log out?");
+        myAlertBuilder.setPositiveButton("LOG OUT", new
+                DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        FirebaseAuth.getInstance().signOut();
+                        Intent intent = new Intent(home.this,
+                                MainActivity.class);
+                        startActivity(intent);
+                    }
+                });
+        myAlertBuilder.setNegativeButton("CANCEL", new
+                DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(), "Log out canceled",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+        myAlertBuilder.show();
+
 
     }
 

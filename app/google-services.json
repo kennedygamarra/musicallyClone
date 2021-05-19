@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "176417927810",
+    "project_id": "musically-clone-f65a6",
+    "storage_bucket": "musically-clone-f65a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176417927810:android:bfc2763b17ee244e68ba9b",
+        "android_client_info": {
+          "package_name": "com.kennedygamarra.musically"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176417927810-ooilsj9asbtf4sio4op8f99q6nnfc6bn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBtBU0eTQO8ypxwHYWvGyuug3rUPryifI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176417927810-ooilsj9asbtf4sio4op8f99q6nnfc6bn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
